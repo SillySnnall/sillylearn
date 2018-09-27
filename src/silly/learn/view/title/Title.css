@@ -1,0 +1,43 @@
+.title_bg {
+    height: 70px;
+    background-color: #2a2a2a;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+}
+
+.title_layou {
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+.ico_title {
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.title_text {
+    margin-left: 20px;
+    text-align: center;
+}
+
+.text_style{
+    color: #cccccc;
+    font-weight: 500;
+}
+
+.line_margin{
+    margin-left: 10px;
+    margin-right: 10px;
+}

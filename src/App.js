@@ -1,31 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
-import { Button } from 'antd';
-import 'antd/dist/antd.css';  // or 'antd/dist/antd.less'
+import {
+    BrowserRouter as Router,
+    Route
+} from 'react-router-dom'
+import Home from "./silly/learn/home/Home";
+import Study from "./silly/learn/study/Study";
+import Test from "./silly/learn/test/Test";
+import Type from "./silly/learn/type/Type";
+import Play from "./silly/learn/play/Play";
+import News from "./silly/learn/news/News";
+
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-          <Button type="primary" shape="circle" icon="search" />
-          <Button type="primary" icon="search">Search</Button>
-          <Button shape="circle" icon="search" />
-          <Button icon="search">Search</Button>
-          <br />
-          <Button shape="circle" icon="search" />
-          <Button icon="search">Search</Button>
-          <Button type="dashed" shape="circle" icon="search" />
-          <Button type="dashed" icon="search">Search</Button>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <Router>
+                <div>
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/study" component={Study}/>
+                    <Route path="/type" component={Type}/>
+                    <Route path="/play" component={Play}/>
+                    <Route path="/news" component={News}/>
+
+                    <Route path="/test" component={Test}/>
+                </div>
+            </Router>
+        );
+    }
 }
 
 export default App;
